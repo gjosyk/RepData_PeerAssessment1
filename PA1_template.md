@@ -40,7 +40,7 @@ For this part of the assignment, you can ignore the missing values in the datase
 ggplot(noNA, aes(date, steps)) + geom_bar(stat = "identity", colour = "red", fill = "red", width = 1) + facet_grid(. ~ month, scales = "free") + labs(title = "Total Number of Daily Steps", x = "Date", y = "Number of steps")
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
+![plot of chunk unnamed-chunk-3](figure/figure1.png) 
 
 * Calculate and report the mean and median total number of steps taken per day
 
@@ -75,7 +75,7 @@ names(avgSteps)[2] <- "meanOfSteps"
 ggplot(avgSteps, aes(interval, meanOfSteps)) + geom_line(color = "red", size = 1) + labs(title = "Plot of Steps Taken in 5-minute Intervals", x = "5-minute intervals", y = "Average Number of Steps Taken")
 ```
 
-![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
+![plot of chunk unnamed-chunk-6](figure/figure2.png) 
 
 * Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -134,7 +134,7 @@ ggplot(tidyData, aes(date, steps)) + geom_bar(stat = "identity",
                                              width = 1) + facet_grid(. ~ month, scales = "free") + labs(title = "Total Number of Steps Taken Each Day", x = "Date", y = "Total number of steps")
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
+![plot of chunk unnamed-chunk-10](figure/figure3.png) 
 
 * Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
 
@@ -217,4 +217,4 @@ xyplot(avgSteps$meanOfSteps ~ avgSteps$interval | avgSteps$weekdays,
        xlab = "Interval", ylab = "Number of steps")
 ```
 
-![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15.png) 
+![plot of chunk unnamed-chunk-15](figure/figure4.png) 
